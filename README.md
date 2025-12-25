@@ -85,6 +85,8 @@ streamlit run app.py
 
 <h1 align="center" id="-sistem-sederhana-streamlit-">🎓 Sistem Sederhana Streamlit 🎓</h1>
 
+Aplikasi dapat diakses di link website berikut https://bone-fracture-classification-barzjehgvuudtmhxbdpdtb.streamlit.app/
+
 Aplikasi berbasis web ini memungkinkan pengguna untuk melakukan deteksi secara *real-time* dengan mengunggah file citra X-Ray.
 
 ### Tampilan Antarmuka

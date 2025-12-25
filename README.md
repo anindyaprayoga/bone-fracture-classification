@@ -46,23 +46,23 @@ Berikut adalah ringkasan performa metrik evaluasi serta analisis hasil untuk set
 
 | Nama Model | Accuracy | Precision | Recall | F1-Score | Hasil Analisis |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| **Base CNN** | 0.70 | 0.73 | 0.70 | 0.70 | Performa dasar yang cukup stabil namun terbatas dalam menangkap fitur spasial yang kompleks. |
-| **MobileNetV2** | 0.68 | 0.71 | 0.68 | 0.68 | Model paling ringan dengan kecepatan inferensi tinggi, namun mengalami sedikit penurunan akurasi pada data medis ini. |
-| **ResNet50** | **0.78** | **0.82** | **0.78** | **0.78** | **Model Terbaik**. Memiliki kemampuan ekstraksi fitur terdalam sehingga paling akurat dalam mendeteksi fraktur halus. |
+| **Base CNN** | **0.79** | **0.82** | **0.82** | **0.79** | **Model Terbaik**, Walaupun model paling sederhana namun custom trainig dari awal memberikan kemampuan khusus untuk klasifikasi citra x-ray pada domain medis. |
+| **MobileNetV2** | 0.62 | 0.62 | 0.62 | 0.61 | Model transfer learning yang paling ringan, namun dalam kasus ini belum mendapatkan akurasi yang cukup baik sehingga belum bisa diandalkan untuk klasifikasi. |
+| **ResNet50** | 0.76 | 0.81 | 0.80 | 0.76 | Model transfer learning yang sedikit lebih baik dalam melakukan klasifikasi citra x-ray, namun masih belum sebaik model custom atau base yang di latih dari awal. |
 
 #### Confusion Matrix 🔴🟢
 Visualisasi prediksi benar dan salah untuk setiap kelas pada data pengujian:
 
 | **Base CNN** | **MobileNetV2** | **ResNet50** |
 | :---: | :---: | :---: |
-| ![CM Base CNN](URL_GAMBAR_CM_BASE_CNN) | ![CM MobileNet](URL_GAMBAR_CM_MOBILENET) | ![CM ResNet](URL_GAMBAR_CM_RESNET) |
+| ![CM Base CNN](https://github.com/anindyaprayoga/bone-fracture-classification/blob/main/assets/confussion%20matrix%20cnn.png) | ![CM MobileNet](https://github.com/anindyaprayoga/bone-fracture-classification/blob/main/assets/confussion%20matrix%20mobilenetv2.png) | ![CM ResNet](https://github.com/anindyaprayoga/bone-fracture-classification/blob/main/assets/confussion%20matrix%20resnet-50.png) |
 
 #### Learning Curves 📈
 Grafik akurasi dan loss selama proses pelatihan (Training vs Validation):
 
 | **Base CNN** | **MobileNetV2** | **ResNet50** |
 | :---: | :---: | :---: |
-| ![LC Base CNN](URL_GAMBAR_LC_BASE_CNN) | ![LC MobileNet](URL_GAMBAR_LC_MOBILENET) | ![LC ResNet](URL_GAMBAR_LC_RESNET) |
+| ![LC Base CNN](https://github.com/anindyaprayoga/bone-fracture-classification/blob/main/assets/learning%20curve%20cnn.png) | ![LC MobileNet](https://github.com/anindyaprayoga/bone-fracture-classification/blob/main/assets/learning%20curve%20mobilenetv2.png) | ![LC ResNet](https://github.com/anindyaprayoga/bone-fracture-classification/blob/main/assets/learning%20curve%20resnet-50.png) |
 
 ### Analisis Kesalahan
 Berdasarkan hasil pengujian, model masih mengalami kesulitan pada:
